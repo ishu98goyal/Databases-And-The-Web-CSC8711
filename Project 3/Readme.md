@@ -11,7 +11,7 @@ Csc 8711, Databases and the Web - Programming Project 3
 
 This assignment deals with JSON representations of a database viewed at from the Entity Relationship data model perspective. As an example, consider the following ER Design of a database:
 
-![](https://tinman.cs.gsu.edu/~raj/8711/sp23/p3/files/studentDB-ER.jpg)
+![](./studentDB-ER.jpg)
 
 The following two JSON files represent the ER schema and the instance respectively.
 

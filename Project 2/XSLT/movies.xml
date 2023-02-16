@@ -1,0 +1,446 @@
+<mdb>
+	<movies>
+		<movie id="godfatherthe">
+			<title>The Godfather</title>
+			<year>1972</year>
+			<directors>
+				<director idref="francisfordcoppola"/>
+			</directors>
+			<genres>
+				<genre>Crime</genre>
+				<genre>Drama</genre>
+			</genres>
+			<plot>A Mafia boss' son, previously uninvolved in the business, takes over when his father is critically wounded in a mob hit. </plot>
+			<cast>
+				<performer>
+					<actor idref="marlonbrando"/>
+					<role>Don Vito Corleone</role>
+				</performer>
+				<performer>
+					<actor idref="alpacino"/>
+					<role>Michael Corleone</role>
+				</performer>
+				<performer>
+					<actor idref="dianekeaton"/>
+					<role>Kay Adams Corleone</role>
+				</performer>
+				<performer>
+					<actor idref="robertduvall"/>
+					<role>Tom Hagen</role>
+				</performer>
+				<performer>
+					<actor idref="jamescaan"/>
+					<role>Santino "Sonny" Corleone</role>
+				</performer>
+				<performer>
+					<actor idref="alfredhitchcock"/>
+					<role>John 'Scottie' Ferguson</role>
+				</performer>
+			</cast>
+		</movie>
+		<movie id="vertigo">
+			<title>Vertigo</title>
+			<year>1958</year>
+			<directors>
+				<director idref="alfredhitchcock"/>
+			</directors>
+			<genres>
+				<genre>Thriller</genre>
+				<genre>Drama</genre>
+			</genres>
+			<plot>Complex story about a San Francisco detective and his psychological troubles with fear of heights and with a woman. </plot>
+			<cast>
+				<performer>
+					<actor idref="alfredhitchcock"/>
+					<role>John 'Scottie' Ferguson</role>
+				</performer>
+				<performer>
+					<actor idref="kimnovak"/>
+					<role>Madeleine Elster/Judy Barton</role>
+				</performer>
+				<performer>
+					<actor idref="barbarabelgeddes"/>
+					<role>Marjorie 'Midge' Wood</role>
+				</performer>
+			</cast>
+		</movie>
+		<movie id="rearwindow">
+			<title>Rear Window</title>
+			<year>1954</year>
+			<directors>
+				<director idref="alfredhitchcock"/>
+			</directors>
+			<genres>
+				<genre>Thriller</genre>
+				<genre>Mystery</genre>
+			</genres>
+			<plot>A wheelchair bound photographer spies on his neighbours from his apartment window and becomes convinced one of them has committed murder </plot>
+			<cast>
+				<performer>
+					<actor idref="jamesstewart"/>
+					<role>L. B. "Jeff" Jeffries</role>
+				</performer>
+				<performer>
+					<actor idref="gracekelly"/>
+					<role>Lisa Carol Fremont</role>
+				</performer>
+				<performer>
+					<actor idref="alfredhitchcock"/>
+					<role>John 'Scottie' Ferguson</role>
+				</performer>
+			</cast>
+		</movie>
+		<movie id="itsawonderfullife">
+			<title>Its a Wonderful Life</title>
+			<year>1946</year>
+			<directors>
+				<director idref="frankcapra"/>
+			</directors>
+			<genres>
+				<genre>Fantasy</genre>
+				<genre>Family</genre>
+				<genre>Drama</genre>
+			</genres>
+			<plot>An angel hepls a despairingly frustrated man by showing the profoundly positive impact he had on his community </plot>
+			<cast>
+				<performer>
+					<actor idref="jamesstewart"/>
+					<role>George Bailey</role>
+				</performer>
+				<performer>
+					<actor idref="donnareed"/>
+					<role>Mary Hatch</role>
+				</performer>
+				<performer>
+					<actor idref="alfredhitchcock"/>
+					<role>John 'Scottie' Ferguson</role>
+				</performer>
+			</cast>
+		</movie>
+		<movie id="citizenkane">
+			<title>Citizen Kane</title>
+			<year>1941</year>
+			<directors>
+				<director idref="orsonwelles"/>
+			</directors>
+			<genres>
+				<genre>Crime</genre>
+				<genre>Sled</genre>
+			</genres>
+			<plot>Powerful newspaper owner Charles Foster Kane was many things to many people, both in life and, as seen in retrospective here, in death. </plot>
+			<cast>
+				<performer>
+					<actor idref="orsonwelles"/>
+					<role>Charles Foster Kane</role>
+				</performer>
+				<performer>
+					<actor idref="josephcotten"/>
+					<role>Jedediah Leland</role>
+				</performer>
+				<performer>
+					<actor idref="alfredhitchcock"/>
+					<role>John 'Scottie' Ferguson</role>
+				</performer>
+			</cast>
+		</movie>
+		<movie id="silenceofthelambsthe">
+			<title>Silence of the Lambs</title>
+			<year>1991</year>
+			<directors>
+				<director idref="jonathandemme"/>
+			</directors>
+			<genres>
+				<genre>Crime</genre>
+				<genre>Thriller</genre>
+				<genre>Horror</genre>
+			</genres>
+			<plot>Clarice Starling, a young FBI agent, is assigned to help find a missing woman, and save her from a psychopathic killer with the help of another killer. </plot>
+			<cast>
+				<performer>
+					<actor idref="jodiefoster"/>
+					<role>Clarice Starling</role>
+				</performer>
+				<performer>
+					<actor idref="anthonyhopkins"/>
+					<role>Hannibal Lector</role>
+				</performer>
+				<performer>
+					<actor idref="alfredhitchcock"/>
+					<role>John 'Scottie' Ferguson</role>
+				</performer>
+			</cast>
+		</movie>
+		<movie id="godfatherpartiithe">
+			<title>The Godfather Part II</title>
+			<year>1974</year>
+			<directors>
+				<director idref="francisfordcoppola"/>
+			</directors>
+			<genres>
+				<genre>Crime</genre>
+				<genre>Drama</genre>
+			</genres>
+			<plot>The early life and career of Vito Corleone is portrayed while his son expands and tightens his grip on his crime syndicate in the 1950's </plot>
+			<cast>
+				<performer>
+					<actor idref="alpacino"/>
+					<role>Michael Corleone</role>
+				</performer>
+				<performer>
+					<actor idref="jamescaan"/>
+					<role>Santino "Sonny" Corleone</role>
+				</performer>
+				<performer>
+					<actor idref="dianekeaton"/>
+					<role>Kay Adams Corleone</role>
+				</performer>
+				<performer>
+					<actor idref="robertduvall"/>
+					<role>Tom Hagen</role>
+				</performer>
+				<performer>
+					<actor idref="robertdeniro"/>
+					<role>Vito Corleone</role>
+				</performer>
+				<performer>
+					<actor idref="alfredhitchcock"/>
+					<role>John 'Scottie' Ferguson</role>
+				</performer>
+			</cast>
+		</movie>
+		<movie id="titanic">
+			<title>titanic</title>
+			<year>1974</year>
+			<directors>
+				<director idref="francisfordcoppola"/>
+			</directors>
+			<genres>
+				<genre>Crime</genre>
+				<genre>Drama</genre>
+			</genres>
+			<plot>The early life and career of Vito Corleone is portrayed while his son expands and tightens his grip on his crime syndicate in the 1950's </plot>
+			<cast>
+				<performer>
+					<actor idref="alfredhitchcock"/>
+					<role>John 'Scottie' Ferguson</role>
+				</performer>
+			</cast>
+		</movie>
+		<movie id="batman">
+			<title>Batman</title>
+			<year>1974</year>
+			<directors>
+				<director idref="alfredhitchcock"/>
+			</directors>
+			<genres>
+				<genre>Crime</genre>
+				<genre>Drama</genre>
+			</genres>
+			<plot>The early life and career of Vito Corleone is portrayed while his son expands and tightens his grip on his crime syndicate in the 1950's </plot>
+			<cast>
+				<performer>
+					<actor idref="alfredhitchcock"/>
+					<role>John 'Scottie' Ferguson</role>
+				</performer>
+			</cast>
+		</movie>
+		<movie id="airport">
+			<title>Airport</title>
+			<year>1974</year>
+			<directors>
+				<director idref="alfredhitchcock"/>
+			</directors>
+			<genres>
+				<genre>Crime</genre>
+				<genre>Drama</genre>
+			</genres>
+			<plot>The early life and career of Vito Corleone is portrayed while his son expands and tightens his grip on his crime syndicate in the 1950's </plot>
+			<cast>
+				<performer>
+					<actor idref="alfredhitchcock"/>
+					<role>John 'Scottie' Ferguson</role>
+				</performer>
+			</cast>
+		</movie>
+	</movies>
+	<performers>
+		<performer id="marlonbrando">
+			<name>Marlon Brando Jr.</name>
+			<dob>1924-04-03</dob>
+			<pob>Omaha, Nebraska</pob>
+			<actedin>
+				<movie idref="godfather"/>
+			</actedin>
+		</performer>
+		<performer id="jamesstewart">
+			<name>James Maitland Stewart</name>
+			<dob>1908-05-20</dob>
+			<pob>Indiana, Pennsylvania, USA</pob>
+			<actedin>
+				<movie idref="vertigo"/>
+				<movie idref="rearwindow"/>
+				<movie idref="itsawonderfullife"/>
+			</actedin>
+		</performer>
+		<performer id="kimnovak">
+			<name>Marilyn Pauline Novak</name>
+			<dob>1933-02-13</dob>
+			<pob>Chicago, Illinois, USA</pob>
+			<actedin>
+				<movie idref="vertigo"/>
+			</actedin>
+		</performer>
+		<performer id="barbarabelgeddes">
+			<name>Barbara Bel Geddes</name>
+			<dob>1922-10-31</dob>
+			<pob>New York, New York, USA</pob>
+			<actedin>
+				<movie idref="vertigo"/>
+			</actedin>
+		</performer>
+		<performer id="alfredhitchcock">
+			<name>Alfred Joseph Hitchcock</name>
+			<dob>1899-08-13</dob>
+			<pob>Leytonstone, London, England, UK</pob>
+			<directed>
+				<movie idref="rearwindow"/>
+				<movie idref="vertigo"/>
+				<movie idref="airport"/>
+				<movie idref="batman"/>
+			</directed>
+			<actedin>
+				<movie idref="vertigo"/>
+				<movie idref="rearwindow"/>
+				<movie idref="itsawonderfullife"/>
+				<movie idref="citizenkane"/>
+				<movie idref="silenceofthelambsthe"/>
+				<movie idref="godfather"/>
+				<movie idref="godfatherpartiithe"/>
+				<movie idref="titanic"/>
+				<movie idref="batman"/>
+				<movie idref="airport"/>
+			</actedin>
+		</performer>
+		<performer id="gracekelly">
+			<name>Grace Patricia Kelly</name>
+			<dob>1928-11-12</dob>
+			<pob>Philadelphia, Pennsylvania, USA</pob>
+			<actedin>
+				<movie idref="rearwindow"/>
+			</actedin>
+		</performer>
+		<performer id="frankcapra">
+			<name>Frank Capra</name>
+			<dob>1897-05-18</dob>
+			<pob>Bisacquino, Sicily, Italy</pob>
+			<directed>
+				<movie idref="itsawonderfullife"/>
+			</directed>
+		</performer>
+		<performer id="donnareed">
+			<name>Donna Belle Mullenger</name>
+			<dob>1921-01-27</dob>
+			<pob>Denison, Iowa</pob>
+			<actedin>
+				<movie idref="itsawonderfullife"/>
+			</actedin>
+		</performer>
+		<performer id="orsonwelles">
+			<name>Orson Welles</name>
+			<dob>1915-05-06</dob>
+			<pob>Kenosha, Wisconsin</pob>
+			<actedin>
+				<movie idref="citizenkane"/>
+			</actedin>
+			<directed>
+				<movie idref="citizenkane"/>
+			</directed>
+		</performer>
+		<performer id="josephcotten">
+			<name>Joseph Cotten</name>
+			<dob>1905-05-15</dob>
+			<pob>Petersburg, Virginia</pob>
+			<actedin>
+				<movie idref="citizenkane"/>
+			</actedin>
+		</performer>
+		<performer id="robertdeniro">
+			<name>Robert De Niro</name>
+			<dob>1943-08-17</dob>
+			<pob>New York, New York</pob>
+			<actedin>
+				<movie idref="godfatherpartiithe"/>
+			</actedin>
+		</performer>
+		<performer id="jodiefoster">
+			<name>Alicia Christian Foster</name>
+			<dob>1962-11-19</dob>
+			<pob>Los Angeles, California, USA</pob>
+			<actedin>
+				<movie idref="silenceofthelambsthe"/>
+			</actedin>
+		</performer>
+		<performer id="anthonyhopkins">
+			<name>Philip Anthony Hopkins</name>
+			<dob>1937-12-31</dob>
+			<pob>Port Talbot, West Glamorgan, Wales, UK</pob>
+			<actedin>
+				<movie idref="silenceofthelambsthe"/>
+			</actedin>
+		</performer>
+		<performer id="jonathandemme">
+			<name>Jonathan Demme</name>
+			<dob>1944-02-22</dob>
+			<pob>Baldwin, Long Island, NY, USA</pob>
+			<directed>
+				<movie idref="silenceofthelambsthe"/>
+			</directed>
+		</performer>
+		<performer id="alpacino">
+			<name>Alfred Jacob Pacino</name>
+			<dob>1940-04-25</dob>
+			<pob>South Bronx, New York</pob>
+			<actedin>
+				<movie idref="godfatherthe"/>
+				<movie idref="godfatherpartiithe"/>
+			</actedin>
+		</performer>
+		<performer id="dianekeaton">
+			<name>Diane Hall</name>
+			<dob>1962-11-19</dob>
+			<pob>Los Angeles,California</pob>
+			<actedin>
+				<movie idref="godfatherthe"/>
+				<movie idref="godfatherpartiithe"/>
+			</actedin>
+		</performer>
+		<performer id="robertduvall">
+			<name>Robert Duvall</name>
+			<dob>1931-01-05</dob>
+			<pob>San Diego,California</pob>
+			<actedin>
+				<movie idref="godfatherthe"/>
+				<movie idref="godfatherpartiithe"/>
+			</actedin>
+		</performer>
+		<performer id="jamescaan">
+			<name>James Caan</name>
+			<dob>1940-03-26</dob>
+			<pob>The Bronx, New York</pob>
+			<actedin>
+				<movie idref="godfatherthe"/>
+				<movie idref="godfatherpartiithe"/>
+			</actedin>
+		</performer>
+		<performer id="francisfordcoppola">
+			<name> Francis Ford Coppola </name>
+			<dob>1939-04-07</dob>
+			<pob>Detroit, Michigan</pob>
+			<directed>
+				<movie idref="godfatherthe"/>
+				<movie idref="godfatherpartiithe"/>
+				<movie idref="titanic"/>
+			</directed>
+		</performer>
+	</performers>
+</mdb>

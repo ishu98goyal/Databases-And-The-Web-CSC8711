@@ -1,0 +1,177 @@
+<pubsData>
+	<bars>
+		<bname>
+			Jillians
+		</bname>
+		<bname>
+			Dugans
+		</bname>
+		<bname>
+			ESPN Zone
+		</bname>
+		<bname>
+			Charlies
+		</bname>
+	</bars>
+	<beers>
+		<rname>
+			Bud
+		</rname>
+		<rname>
+			Michelob
+		</rname>
+		<rname>
+			Fosters
+		</rname>
+		<rname>
+			Heineken
+		</rname>
+	</beers>
+	<drinkers>
+		<dname>
+			John
+		</dname>
+		<dname>
+			Peter
+		</dname>
+		<dname>
+			Donald
+		</dname>
+		<dname>
+			Jeremy
+		</dname>
+		<dname>
+			Clark
+		</dname>
+	</drinkers>
+	<frequents>
+		<freq dname="John">
+			<bname>
+				Jillians
+			</bname>
+			<bname>
+				Dugans
+			</bname>
+		</freq>
+		<freq dname="Peter">
+			<bname>
+				ESPN Zone
+			</bname>
+			<bname>
+				Dugans
+			</bname>
+		</freq>
+		<freq dname="Donald">
+			<bname>
+				Dugans
+			</bname>
+		</freq>
+		<freq dname="Jeremy">
+			<bname>
+				Jillians
+			</bname>
+			<bname>
+				Dugans
+			</bname>
+		</freq>
+		<freq dname="Clark">
+			<bname>
+				ESPN Zone
+			</bname>
+			<bname>
+				Charlies
+			</bname>
+		</freq>
+	</frequents>
+	<likes>
+		<like dname="John">
+			<rname>
+				Bud
+			</rname>
+			<rname>
+				Fosters
+			</rname>
+			<rname>
+				Heineken
+			</rname>
+		</like>
+		<like dname="Peter">
+			<rname>
+				Bud
+			</rname>
+		</like>
+		<like dname="Donald">
+			<rname>
+				Bud
+			</rname>
+			<rname>
+				Michelob
+			</rname>
+			<rname>
+				Fosters
+			</rname>
+			<rname>
+				Heineken
+			</rname>
+		</like>
+		<like dname="Jeremy">
+			<rname>
+				Bud
+			</rname>
+			<rname>
+				Fosters
+			</rname>
+			<rname>
+				Heineken
+			</rname>
+		</like>
+		<like dname="Clark">
+			<rname>
+				Bud
+			</rname>
+			<rname>
+				Clark
+			</rname>
+			<rname>
+				Michelob
+			</rname>
+		</like>
+	</likes>
+	<serves>
+		<serve bname="Jillians">
+			<rname>
+				Bud
+			</rname>
+			<rname>
+				Michelob
+			</rname>
+			<rname>
+				Heineken
+			</rname>
+		</serve>
+		<serve bname="Dugans">
+			<rname>
+				Bud
+			</rname>
+			<rname>
+				Michelob
+			</rname>
+			<rname>
+				Fosters
+			</rname>
+		</serve>
+		<serve bname="ESPN Zone">
+			<rname>
+				Fosters
+			</rname>
+		</serve>
+		<serve bname="Charlies">
+			<rname>
+				Heineken
+			</rname>
+			<rname>
+				Foster
+			</rname>
+		</serve>
+	</serves>
+</pubsData>

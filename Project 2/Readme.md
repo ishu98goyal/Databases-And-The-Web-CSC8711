@@ -31,22 +31,7 @@ Write an XML Schema for the gradebook XML documents. Submit the schema under the
 
 Consider a sample binary-tree XML document, storing a set of decimal values, given below:
 
-<node value="5.2" child="none" >
-  <node value="8.0" child="left" >
-    <node value="6.0" child="left" />
-    <node value="18.5" child="right" >
-      <node value="2.0" child="left" >
-        <node value="-60.0" child="right" />
-      </node>
-    </node>
-  </node>
-  <node value="-9.8" child="right" >
-    <node value="14.2" child="left" >
-      <node value="80.5"  child="right" />
-    </node>
-    <node value="24.0" child="right" />
-  </node>
-</node>
+![](./binary.png)
 
 Write an XML Schema for such XML documents. Submit the schema under the file btree.xsd.
 
@@ -80,8 +65,8 @@ Consider the XML document [movies.xml](https://tinman.cs.gsu.edu/~raj/8711/sp23/
 
 Consider the XML document [movies.xml](https://tinman.cs.gsu.edu/~raj/8711/sp23/p2/movies.xml). Write XSLT programs to display a Web page to browse all movies based on the first letter of the movie title. The top of the Web page should have the letters of the alphabet A through Z hyperlinked. On clicking the hyperlink for a letter the lower part of the screen should display movies whose titles begin with that letter. Each of the movies in the listing should display the full title with the year in parentheses. They should also be sorted by year in descending order. The title of the movie should be hyperlinked and upon clicking the hyperlink the details of the individual movie should be displayed below the list of movies. Sample screenshots are shown below:
 
-![image](https://tinman.cs.gsu.edu/~raj/8711/sp23/p2/page1.png)
+![](./page1.png)
 
-![image](https://tinman.cs.gsu.edu/~raj/8711/sp23/p2/page2.png)
+![](./page2.png)
 
-![image](https://tinman.cs.gsu.edu/~raj/8711/sp23/p2/page3.png)
+![](./page3.png)

@@ -1,0 +1,100 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "StudentDB",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "entities": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "attributes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": ["integer", "string"]
+                  },
+                  "size": {
+                    "type": "integer"
+                  }
+                },
+                "required": ["name", "type", "size"]
+              }
+            },
+            "primaryKey": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": ["name", "attributes"]
+        }
+      },
+      "relationships": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "entities": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "cardinality": {
+                    "type": "string",
+                    "enum": ["one", "many"]
+                  },
+                  "participation": {
+                    "type": "string",
+                    "enum": ["mandatory", "optional"]
+                  }
+                },
+                "required": ["name", "cardinality", "participation"]
+              }
+            },
+            "attributes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": ["integer", "string"]
+                  },
+                  "size": {
+                    "type": "integer"
+                  }
+                },
+                "required": ["name", "type", "size"]
+              }
+            }
+          },
+          "required": ["name", "entities"]
+        }
+      }
+    },
+    "required": ["name", "entities", "relationships"]
+  }
+  

@@ -1,0 +1,51 @@
+{
+    "name": "DrinksDB",
+    "entities": [
+      { "name": "bar",
+      	"attributes": [
+    		{"name": "bname","type": "string","size": 20},
+       	 	{"name": "city","type": "string","size": 20},
+        	{"name": "rating","type": "integer","size": 1}
+    	],
+    	"primaryKey":["bname"]
+      },
+      { "name": "beer",
+        "attributes": [
+          {"name": "rname","type": "string","size": 20},
+          {"name": "origin","type": "string","size": 30}
+        ],
+        "primaryKey": ["rname"]
+      },
+      { "name": "drinker",
+        "attributes": [
+          {"name": "dname","type": "string","size": 20},
+          {"name": "gender","type": "string","size": 6},
+          {"name": "age","type": "integer", "size": 3}
+        ],
+        "primaryKey": ["dname"]
+      }
+    ],
+  "relationships": [
+    { "name": "frequents",
+      "entities": [
+          {"name": "drinker","cardinality": "many","participation": "optional"},
+          {"name": "bar","cardinality": "many","participation": "mandatory"}
+        ],
+      "attributes": []
+    },
+    { "name": "serves",
+      "entities": [
+          {"name": "bar","cardinality": "many","participation": "mandatory"},
+          {"name": "beer","cardinality": "many","participation": "mandatory"}
+        ],
+      "attributes": [{"name": "price","type": "integer","size": 2}]
+    },
+    { "name": "likes",
+      "entities": [
+          {"name": "drinker","cardinality": "many","participation": "mandatory"},
+          {"name": "beer","cardinality": "many","participation": "optional"}
+        ],
+      "attributes": []
+    }
+  ]
+}

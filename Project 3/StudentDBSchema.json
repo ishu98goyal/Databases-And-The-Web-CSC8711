@@ -1,0 +1,92 @@
+{
+    "name": "StudentDB",
+    "entities": [
+      { "name": "student",
+      	"attributes": [
+    		{"name": "sno","type": "integer","size": 4},
+       	 	{"name": "sname","type": "string","size": 20},
+        	{"name": "gender","type": "string","size": 1},
+        	{"name": "email","type": "string","size": 50},
+        	{"name": "address","type": "string","size": 80}
+    	],
+    	"primaryKey":["sno"]
+      },
+      { "name": "department",
+        "attributes": [
+          {"name": "dno","type": "integer","size": 3},
+          {"name": "dname","type": "string","size": 30},
+          {"name": "location","type": "string","size": 30},
+          {"name": "phone","type": "string","size": 12},
+          {"name": "website","type": "string","size": 80}
+        ],
+        "primaryKey": ["dno"]
+      },
+      { "name": "course",
+        "attributes": [
+          {"name": "cno","type": "string","size": 7},
+          {"name": "cname","type": "string","size": 30},
+          {"name": "classroom","type": "string","size": 30},
+          {"name": "days","type": "string","size": 10},
+          {"name": "starttime","type": "string","size": 20},
+          {"name": "endtime","type": "string", "size": 20}
+        ],
+        "primaryKey": ["cno"]
+      },
+      { "name": "faculty",
+        "attributes": [
+          {"name": "fno","type": "integer","size": 5},
+          {"name": "fname","type": "string","size": 30},
+          {"name": "gender","type": "string","size": 1},
+          {"name": "homepage","type": "string","size": 100},
+          {"name": "room","type": "string","size": 50}
+        ],
+        "primaryKey": ["fno"]
+      }
+    ],
+  "relationships": [
+    { "name": "enroll",
+      "entities": [
+          {"name": "student","cardinality": "many","participation": "optional"},
+          {"name": "course","cardinality": "many","participation": "mandatory"}
+        ],
+      "attributes": [
+          {"name": "grade","type": "string","size": 2}
+        ]
+    },
+    { "name": "study",
+      "entities": [
+          {"name": "student","cardinality": "many","participation": "optional"},
+          {"name": "department","cardinality": "one","participation": "mandatory"}
+        ],
+      "attributes": []
+    },
+    { "name": "worksFor",
+      "entities": [
+          {"name": "department","cardinality": "one","participation": "optional"},
+          {"name": "faculty","cardinality": "one","participation": "mandatory"}
+        ],
+      "attributes": []
+    },
+    { "name": "offers",
+      "entities": [
+          {"name": "department","cardinality": "one","participation": "mandatory"},
+          {"name": "course","cardinality": "many","participation": "mandatory"}
+        ],
+      "attributes": []
+    },
+    { "name": "advisor",
+      "entities": [
+          {"name": "student","cardinality": "many","participation": "optional"},
+          {"name": "faculty","cardinality": "one","participation": "optional"}
+        ],
+      "attributes": []
+    },
+    { "name": "teaches",
+      "entities": [
+          {"name": "faculty","cardinality": "one","participation": "mandatory"},
+          {"name": "course","cardinality": "many","participation": "mandatory"}
+        ],
+      "attributes": []
+    }
+  ]
+}

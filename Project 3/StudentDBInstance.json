@@ -1,0 +1,103 @@
+{
+    "refersTo": "StudentDBSchema.json",
+    "entities": {
+    "student": [
+    {
+    "sno": "1000",
+    "sname": "Chetan",
+    "gender": "M",
+    "email": "chetan.galgali@gmail.com",
+    "address": "123 Main St, Atlanta, GA 33333"
+    },
+    {
+    "sno": "1001",
+    "sname": "Saravanan",
+    "gender": "M",
+    "email": "sarav.mathi@gmail.com",
+    "address": "123 Main St, Atlanta, GA 33333"
+    }
+    ],
+    "department": [
+    {
+    "dno": "100",
+    "dname": "Computer Science",
+    "location": "34 Peachtree Street",
+    "phone": "404-413-5700",
+    "website": "http://www.cs.gsu.edu/"
+    },
+    {
+    "dno": "101",
+    "dname": "Computer Information Systems",
+    "location": "200 Marietta Street",
+    "phone": "404-413-5800",
+    "website": "http://www.cis.gsu.edu/"
+    }
+    ],
+    "course": [
+    {
+    "cno": "CSc8711",
+    "cname": "Databases and the Web",
+    "classroom": "CS 400",
+    "days": "F",
+    "starttime": "10.00",
+    "endtime": "12.30"
+    },
+    {
+    "cno": "CSc8222",
+    "cname": "Network Security",
+    "classroom": "CS 400",
+    "days": "MW",
+    "starttime": "10.00",
+    "endtime": "12.30"
+    }
+    ],
+    "faculty": [
+    {
+    "fno": "11111",
+    "fname": "Raj Sunderraman",
+    "gender": "M",
+    "homepage": "http://tinman.cs.gsu.edu/~raj",
+    "room": "1452, 34 Peachtree Street"
+    },
+    {
+    "fno": "11122",
+    "fname": "Raheem Beyah",
+    "gender": "M",
+    "homepage": "http://www.cs.gsu.edu/beyah",
+    "room": "1453, 34 Peachtree Street"
+    }
+    ]
+    },
+    "relationships": {
+    "advisor": [
+    {
+    "sno": "1000",
+    "fno": "11111"
+    },
+    {
+    "sno": "1001",
+    "fno": "11122"
+    }
+    ],
+    "enroll": [
+    {
+    "sno": "1000",
+    "cno": "CSc8711",
+    "grade": "A"
+    },
+    {
+    "sno": "1000",
+    "cno": "CSc8222",
+    "grade": "A"
+    },
+    {
+    "sno": "1001",
+    "cno": "CSc8711",
+    "grade": "B"
+    }
+    ],
+    "study": [],
+    "offers": [],
+    "teaches": []
+    }
+    }

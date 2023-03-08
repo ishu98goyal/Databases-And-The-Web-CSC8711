@@ -1,0 +1,268 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "student": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sno": {
+            "type": "integer",
+            "maxLength": 4
+          },
+          "sname": {
+            "type": "string",
+            "maxLength": 20
+          },
+          "gender": {
+            "type": "string",
+            "maxLength": 1
+          },
+          "email": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "address": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "enroll": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "grade": {
+                  "type": "string",
+                  "maxLength": 2
+                }
+              },
+              "required": [
+                "grade"
+              ]
+            }
+          },
+          "study": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          },
+          "advisor": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          }
+        },
+        "required": [
+          "sno",
+          "sname",
+          "gender",
+          "email",
+          "address"
+        ]
+      }
+    },
+    "department": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dno": {
+            "type": "integer",
+            "maxLength": 3
+          },
+          "dname": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "location": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "phone": {
+            "type": "string",
+            "maxLength": 12
+          },
+          "website": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "study": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            },
+            "minItems": 1
+          },
+          "worksFor": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          },
+          "offers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "dno",
+          "dname",
+          "location",
+          "phone",
+          "website"
+        ]
+      }
+    },
+    "course": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cno": {
+            "type": "string",
+            "maxLength": 7
+          },
+          "cname": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "classroom": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "days": {
+            "type": "string",
+            "maxLength": 10
+          },
+          "starttime": {
+            "type": "string",
+            "maxLength": 20
+          },
+          "endtime": {
+            "type": "string",
+            "maxLength": 20
+          },
+          "enroll": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "grade": {
+                  "type": "string",
+                  "maxLength": 2
+                }
+              },
+              "required": [
+                "grade"
+              ]
+            },
+            "minItems": 1
+          },
+          "offers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            },
+            "minItems": 1
+          },
+          "teaches": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "cno",
+          "cname",
+          "classroom",
+          "days",
+          "starttime",
+          "endtime"
+        ]
+      }
+    },
+    "faculty": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fno": {
+            "type": "integer",
+            "maxLength": 5
+          },
+          "fname": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "gender": {
+            "type": "string",
+            "maxLength": 1
+          },
+          "homepage": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "room": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "worksFor": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            },
+            "minItems": 1
+          },
+          "advisor": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          },
+          "teaches": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "fno",
+          "fname",
+          "gender",
+          "homepage",
+          "room"
+        ]
+      }
+    }
+  }
+}

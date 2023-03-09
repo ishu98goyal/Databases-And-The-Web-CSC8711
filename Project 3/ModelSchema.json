@@ -1,100 +1,71 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "StudentDB",
-    "type": "object",
-    "properties": {
-      "name": {
-        "type": "string"
-      },
-      "entities": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "attributes": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string"
-                  },
-                  "type": {
-                    "type": "string",
-                    "enum": ["integer", "string"]
-                  },
-                  "size": {
-                    "type": "integer"
-                  }
-                },
-                "required": ["name", "type", "size"]
-              }
-            },
-            "primaryKey": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "name": {"type": "string", "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"},
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string", "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"},
+          "attributes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {"type": "string", "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"},
+                "type": {"type": "string"},
+                "size": {"type": "integer"},
+              },
+              "required": ["name", "type", "size"],
+              "additionalProperties": false
             }
           },
-          "required": ["name", "attributes"]
-        }
-      },
-      "relationships": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "entities": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string"
-                  },
-                  "cardinality": {
-                    "type": "string",
-                    "enum": ["one", "many"]
-                  },
-                  "participation": {
-                    "type": "string",
-                    "enum": ["mandatory", "optional"]
-                  }
-                },
-                "required": ["name", "cardinality", "participation"]
-              }
-            },
-            "attributes": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string"
-                  },
-                  "type": {
-                    "type": "string",
-                    "enum": ["integer", "string"]
-                  },
-                  "size": {
-                    "type": "integer"
-                  }
-                },
-                "required": ["name", "type", "size"]
-              }
-            }
-          },
-          "required": ["name", "entities"]
-        }
+          "primaryKey": {"type": "array", "items": {"type": "string"}}
+        },
+        "required": ["name", "attributes", "primaryKey"],
+        "additionalProperties": false
       }
     },
-    "required": ["name", "entities", "relationships"]
-  }
-  
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string", "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"},
+          "entities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {"type": "string", "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"},
+                "cardinality": {"type": "string", "enum": ["one", "many"]},
+                "participation": {"type": "string", "enum": ["mandatory", "optional"]}
+              },
+              "required": ["name", "cardinality", "participation"],
+              "additionalProperties": false
+            }
+          },
+          "attributes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {"type": "string", "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"},
+                "type": {"type": "string"},
+                "size": {"type": "integer"}
+              },
+              "required": ["name", "type", "size"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["name", "entities", "attributes"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["name", "entities", "relationships"],
+  "additionalProperties": false
+}

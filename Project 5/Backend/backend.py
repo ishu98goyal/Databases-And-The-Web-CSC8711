@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import rdflib
 from flask import jsonify
-
+from flask_cors import CORS
 
 g = rdflib.Graph()
 g.parse("data/nobel.owl")
@@ -9,6 +9,7 @@ g.parse("data/nobeldata.owl")
 print("graph has %s statements." % len(g))
 
 app = Flask(__name__)
+CORS(app)
 
 #/nobel/nations
 #GET: Return sorted names of all nations
@@ -30,7 +31,8 @@ def nations():
     nation = []
     for row in qres:
         name = ("%s" % row).rsplit('/',1)[-1]
-        nation.append(name)
+        if name!='(no_nationality_info)':
+            nation.append(name)
 
     return jsonify(nation)
 
@@ -221,10 +223,10 @@ def getDetails(name):
         "name": name,
         "nationality": 'not found',
         "category": 'not found',
-        "year": 0000,
+        "year": 'not found',
         "association": 'not found',
-        "born": 0000,
-        "died": 0000,
+        "born": 'not found',
+        "died": 'not found',
         "motivation": 'not found',
         "photo": 'not found'
     }
@@ -294,7 +296,121 @@ def getDetails(name):
 
     return jsonify(result)
 
+#GET: Return list of all nobel winners for the given year, nation, category
+@app.route("/nobel/<int:year>/<string:nation>/<string:category>", methods=['GET'])
+def getYearNationCategory(year, nation, category):
+    # Return list of all nobel winners for the given year, nation, category
+    qres = g.query(
+    """
+    PREFIX table:<http://swat.cse.lehigh.edu/resources/onto/nobel.owl#>
+    PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+    SELECT ?n ?nt ?b ?p ?w ?y
+    {
+        ?g rdf:type table:PersonWinner;
+        table:name ?n;
+        table:nationality ?nt;
+        table:birthYear ?b;
+        table:photo ?p;
+        table:WonPrize ?w.
+        ?w table:yearWon ?y;
+        
+    }
+    """)
 
+    results = []
+
+    for row in qres:
+        result = {
+            "name": str(row.asdict()['n'].toPython()),
+            "nationality": str(row.asdict()['nt'].toPython()).split('/')[-1],
+            "category": str(row.asdict()['w'].toPython()).split('/')[-4],
+            "year": int(row.asdict()['y'].toPython()),
+        }
+        results.append(result)
+
+    winners = []
+    for record in results:
+        if record["nationality"] == nation and record['category']==category and record['year']==year:
+            winners.append(record["name"])
+    return jsonify(winners)
+
+
+@app.route("/nobel/<string:nation>/<string:category>", methods=['GET'])
+def getNationCategory(nation, category):
+    # Return list of all nobel winners for the given nation, category
+    qres = g.query(
+    """
+    PREFIX table:<http://swat.cse.lehigh.edu/resources/onto/nobel.owl#>
+    PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+    SELECT ?n ?nt ?b ?p ?w ?y
+    {
+        ?g rdf:type table:PersonWinner;
+        table:name ?n;
+        table:nationality ?nt;
+        table:birthYear ?b;
+        table:photo ?p;
+        table:WonPrize ?w.
+        ?w table:yearWon ?y;
+        
+    }
+    """)
+
+    results = []
+
+    for row in qres:
+        result = {
+            "name": str(row.asdict()['n'].toPython()),
+            "nationality": str(row.asdict()['nt'].toPython()).split('/')[-1],
+            "category": str(row.asdict()['w'].toPython()).split('/')[-4],
+            "year": int(row.asdict()['y'].toPython()),
+        }
+        results.append(result)
+
+    winners = []
+    for record in results:
+        if record["nationality"] == nation and record['category']==category:
+            winners.append(record["name"])
+    return jsonify(winners)
+
+@app.route("/nobel/y/<int:year>/<string:nation>", methods=['GET'])
+def getYearNation(year, nation):
+    # Return list of all nobel winners for the given year, nation
+    qres = g.query(
+    """
+    PREFIX table:<http://swat.cse.lehigh.edu/resources/onto/nobel.owl#>
+    PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+    SELECT ?n ?nt ?b ?p ?w ?y
+    {
+        ?g rdf:type table:PersonWinner;
+        table:name ?n;
+        table:nationality ?nt;
+        table:birthYear ?b;
+        table:photo ?p;
+        table:WonPrize ?w.
+        ?w table:yearWon ?y;
+        
+    }
+    """)
+
+    results = []
+
+    for row in qres:
+        result = {
+            "name": str(row.asdict()['n'].toPython()),
+            "nationality": str(row.asdict()['nt'].toPython()).split('/')[-1],
+            "category": str(row.asdict()['w'].toPython()).split('/')[-4],
+            "year": int(row.asdict()['y'].toPython()),
+        }
+        results.append(result)
+
+    winners = []
+    for record in results:
+        if record["nationality"] == nation and record['year']==year:
+            winners.append(record["name"])
+    return jsonify(winners)
 
 #Port Number = 8000
 if __name__ == "__main__":

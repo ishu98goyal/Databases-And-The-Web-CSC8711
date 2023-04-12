@@ -1,0 +1,68 @@
+@import "../../../styles.scss";
+
+.details {
+    @include whitebody;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+
+    .image__holder {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+
+        img {
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+    }
+
+    .details__body {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .details__row {
+            display: flex;
+            align-items: start;
+            width: 100%;
+
+            h4,
+            p {
+                margin: 5px 5px 10px 0;
+                font-size: large;
+            }
+
+            p {
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    button {
+        margin-top: 20px;
+        @include buttonCSS;
+    }
+
+    .loading {
+        @include loadingBG;
+        width: 100%;
+        height: 100%;
+        h2 {
+            color: black;
+        }
+    }
+    
+}

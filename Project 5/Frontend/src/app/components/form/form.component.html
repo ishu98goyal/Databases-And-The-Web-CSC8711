@@ -1,0 +1,53 @@
+<div class="form">
+    <h1>Nobel Ontology</h1>
+    <p>Select values from the below filters to fetch the nobel laureates.</p>
+    <div class="dropdowns">
+        <div class="dropdown">
+            <label>Country</label>
+            <ng-select [(ngModel)]="selectedCountry" class="dropdown" placeholder="Select Country" [items]="countries"
+                (clear)="selectedCountry=null" (open)="dropdownOpened('country'); isSearchClicked=false"
+                [searchable]=true [loading]="loading.countries.loading" [loadingText]="loading.countries.message">
+            </ng-select>
+        </div>
+        <div class="dropdown">
+            <label>Year</label>
+            <ng-select [(ngModel)]="selectedYear" placeholder="Select Year" class="dropdown" [items]="years"
+                (clear)="selectedYear=null" (open)="dropdownOpened('year'); isSearchClicked=false" [searchable]=true
+                [loading]="loading.years.loading" [loadingText]="loading.years.message">
+            </ng-select>
+        </div>
+        <div class="dropdown">
+            <label>Category</label>
+            <ng-select [(ngModel)]="selectedCategory" placeholder="Select Category" class="dropdown"
+                [items]="categories" (clear)="selectedCategory=null"
+                (open)="dropdownOpened('category'); isSearchClicked=false"
+                (change)="selectedCategory=selectedCategory?.toLowerCase()" [searchable]=true
+                [loading]=" loading.categories.loading" [loadingText]="loading.categories.message">
+            </ng-select>
+        </div>
+    </div>
+    <button [disabled]="!selectedYear && !selectedCountry && !selectedCategory" (click)="searchData()">
+        Search
+    </button>
+    <ng-container *ngIf="winners.length>0 && !loadingResult else noDataFound">
+        <h1>Nobel Laureates</h1>
+        <p>Click on the nobel laureate tag to view details.</p>
+        <div class="tags">
+            <a *ngFor="let winner of winners" class="tag" [routerLink]="['/details', winner]">
+                {{winner}}</a>
+        </div>
+    </ng-container>
+    <ng-template #noDataFound>
+        <div *ngIf="isSearchClicked && !loadingResult">
+            <h1>Nobel Laureates</h1>
+            <h2>No Data Found</h2>
+        </div>
+    </ng-template>
+    <ng-container *ngIf="loadingResult">
+        <div class="loading">
+            <ngx-loading [show]="loadingResult"
+                [config]="{ backdropBorderRadius: '3px',backdropBackgroundColour: 'lightgray' }"
+                fullScreenBackdrop="false"></ngx-loading>
+        </div>
+    </ng-container>
+</div>

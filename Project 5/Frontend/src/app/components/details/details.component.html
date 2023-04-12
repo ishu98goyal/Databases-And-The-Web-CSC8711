@@ -1,0 +1,55 @@
+<div class="details">
+    <ng-container *ngIf="!loadingData && nobelLaureateDetails.name">
+        <div class="image__holder">
+            <img [src]="nobelLaureateDetails.photo"
+                onerror="this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png';" />
+            <h2>{{nobelLaureateDetails.name}}</h2>
+        </div>
+
+
+        <div class="details__body">
+            <div class="details__row row">
+                <div class="details__row">
+                    <h4><strong>Nationality: </strong></h4>
+                    <p>{{nobelLaureateDetails.nationality}}</p>
+                </div>
+                <div class="details__row margin-right">
+                    <h4><strong>Born:</strong></h4>
+                    <p>{{nobelLaureateDetails.born}}</p>
+                </div>
+                <div class="details__row">
+                    <h4><strong>Death:</strong></h4>
+                    <p>{{nobelLaureateDetails.died}}</p>
+                </div>
+            </div>
+            <div class="details__row row">
+                <div class="details__row">
+                    <h4><strong>Category: </strong></h4>
+                    <p>{{nobelLaureateDetails.category}}</p>
+                </div>
+                <div class="details__row">
+                    <h4><strong>Association: </strong></h4>
+                    <p>{{nobelLaureateDetails.association}}</p>
+                </div>
+                <div class="details__row">
+                    <h4><strong>Year: </strong></h4>
+                    <p>{{nobelLaureateDetails.year}}</p>
+                </div>
+            </div>
+            <div class="details__row">
+                <h4><strong>Motivation: </strong></h4>
+                <p>{{nobelLaureateDetails.motivation}}</p>
+            </div>
+
+        </div>
+
+        <button [routerLink]="'/'">Back</button>
+    </ng-container>
+    <ng-container *ngIf="loadingData">
+        <div class="loading">
+            <ngx-loading [show]="loadingData"
+                [config]="{ backdropBorderRadius: '3px',backdropBackgroundColour: 'lightgray' }"
+                fullScreenBackdrop="false"></ngx-loading>
+        </div>
+    </ng-container>
+</div>

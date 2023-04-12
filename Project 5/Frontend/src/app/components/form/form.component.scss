@@ -1,0 +1,85 @@
+@import "../../../styles.scss";
+
+.form {
+    @include whitebody;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+
+    h1 {
+        margin: 20px 0 5px 0;
+    }
+
+    p {
+        margin: 0 0 20px 0;
+        font-style: italic;
+    }
+
+    .dropdowns {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 10px;
+
+        label {
+            font-size: large;
+        }
+
+        .dropdown {
+            .ng-select.dropdown {
+                margin-top: 10px;
+                min-width: 15rem;
+                max-width: 15rem;
+                border-radius: 0;
+
+                .ng-select-container {
+                    border: 1px solid black;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+
+    button {
+        @include buttonCSS
+
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 0 20px 0;
+        padding: 0 20px 20px 20px;
+        max-height: 350px;
+        min-height: 200px;
+        overflow-y: auto;
+
+        .tag {
+            padding: 10px 15px;
+            height: fit-content;
+            background: white;
+            text-decoration: none;
+            border-radius: 15px;
+            color: black;
+            border: 1px solid black;
+            margin: 10px 10px;
+            transition: all 0.25s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+
+    .loading {
+        position: relative;
+        margin: 10px;
+        height: 350px;
+        width: 95%;
+    }
+}
